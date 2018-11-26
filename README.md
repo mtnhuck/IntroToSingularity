@@ -113,7 +113,7 @@ vagrant up
 vagrant ssh
 cd /vagrant/miniconda
 # Now let's build it!
-sudo singularity build miniconda.img miniconda.def
+sudo singularity build --writable miniconda.img miniconda.def
 ```
 
 ## <a name="basicusage"></a>Basic container usage  
