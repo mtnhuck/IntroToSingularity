@@ -34,9 +34,9 @@ from: neurodebian:jessie
     conda clean --tarballs
 
     # make /data and /scripts so we can mount it to access external resources
-    if [ ! -d /data ]; then mkdir /data; fi
-    if [ ! -d /scripts ]; then mkdir /scripts; fi
-
+    #if [ ! -d /data ]; then mkdir /data; fi
+    #if [ ! -d /scripts ]; then mkdir /scripts; fi
+    mkdir -p /afs /inbox /ihome /idata /environment /dartfs /dartfs-hpc /data /srv /scratch
 %runscript
     echo "Now inside Singularity container woah..."
     exec /bin/bash
